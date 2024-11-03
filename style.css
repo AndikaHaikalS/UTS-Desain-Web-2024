@@ -1,0 +1,268 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fafafa;
+    line-height: 1.6;  
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: url('images/pxfuel.jpg') center center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    min-height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 165, 0, 0.4); /* Warm overlay */
+}
+
+ /* Animation keyframes */
+@keyframes slideBackground {
+    0% {
+        background-image: url('images/pxfuel.jpg');
+    }
+    20% {
+        background-image: url('images/img ayam.jpg');
+    }
+    40% {
+        background-image: url('images/chicken3.jpg');
+    }
+    60% {
+        background-image: url('images/burger2.jpg');
+    }
+    80% {
+        background-image: url('images/burger3.jpg');
+    }
+    100% {
+        background-image: url('images/burger4.jpg');
+    }
+}
+
+
+header {
+    animation: slideBackground 15s infinite alternate; /* Adjust duration as needed */
+}
+/* Header Text Styling */
+header h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.header-logo .logo {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: rgba(255, 140, 0, 0.7); /* Chicken-inspired orange */
+}
+
+nav ul li a:hover {
+    background-color: #ff4500; /* Deep orange hover */
+}
+
+/* Hero Section */
+.hero {
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(255, 69, 0, 0.8); /* Overlayed deep orange */
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-blend-mode: overlay;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Main Content */
+main {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr; /* Selalu satu kolom */
+    margin: 50px 0;
+}
+
+/* Menu Section Styling */
+.menu-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.menu-card:hover .menu-image {
+    transform: scale(1.1);
+}
+
+.menu-title {
+    font-size: 1.5em;
+    color: #ff4d4d;
+    transition: color 0.3s;
+}
+
+.menu-card:hover .menu-title {
+    color: #ff8c1a;
+}
+
+.price {
+    color: #ff8c1a;
+}
+
+
+.item {
+    background-color: #ffdbb4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center content */
+}
+
+/* Image Styling */
+.item img {
+    width: 100%; /* Make image take the full width of the container */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    border-radius: 8px; /* Round corners of images */
+    margin-bottom: 10px;
+}
+
+.item h4 {
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.item ul li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    nav ul li {
+        display: inline-block;
+    }
+    /* Tidak ada perubahan kolom di main */
+}
+
+@media (min-width: 992px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    .hero h2 {
+        font-size: 3em;
+    }
+    /* Tidak ada perubahan kolom di main */
+}
+
+.item {
+    background-color: #ffdbb4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item h4 {
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.item ul li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color:rgba(255, 69, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    nav ul li {
+        display: inline-block;
+    }
+    /* Tidak ada perubahan kolom di main */
+}
+
+@media (min-width: 992px){}
